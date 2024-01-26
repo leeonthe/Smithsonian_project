@@ -21,6 +21,8 @@
     min-height: 100%;
     background: var(--color-bg);
     font-family: var(--font-sans-serif);
+    /*scroll bar issue*/
+    overflow: auto;
   }
   
   .container {

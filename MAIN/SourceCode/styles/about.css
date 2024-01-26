@@ -1,6 +1,7 @@
 .about-title-img{
-        width: 100%;
-        height: 700px;
+        /*edit width and height for title img*/
+        width: 50%;
+        height: 400px;
         margin: 2rem 0;
 }
 
