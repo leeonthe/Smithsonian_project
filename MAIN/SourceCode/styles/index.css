@@ -1,0 +1,23 @@
+#home .header{
+        width: 75%;
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+}
+
+.header .khf-logo a{
+        font-size: 8rem;
+        font-weight: 500;
+        font-family: var(--font-accent);
+        text-transform: uppercase;
+        line-height: 75%;
+}
+
+.header .khf-logo {
+        margin-bottom: 0.5rem;
+}
+
+.header .khf-logo img{
+        width: auto;
+        height: auto;
+}

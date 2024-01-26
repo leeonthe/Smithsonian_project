@@ -1,0 +1,33 @@
+.about-title-img{
+        width: 100%;
+        height: 700px;
+        margin: 2rem 0;
+}
+
+.about-description{
+        width: 100%;
+        display: flex;
+        margin-bottom: 3rem;
+
+}
+
+.about-description > div{
+        flex: 1;
+}
+
+.about-description-col h1 {
+        line-height: 100%;
+        text-transform: uppercase;
+        font-family: var(--font-accent);
+        font-weight: 400;
+        font-size: 4rem;
+}
+
+.about-description-col p{
+       font-size: 1.4rem; 
+       font-weight: 400;
+}
+
+.about-description .about-description-col:nth-child(2){
+        padding-right: 10rem;
+}
