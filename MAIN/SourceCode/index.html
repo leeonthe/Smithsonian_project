@@ -6,7 +6,11 @@
     <title>1st page</title>
     <link rel="stylesheet" href="./main.css" />
     <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+ 
   </head>
+
+
   <body>
     <div class="menu-toggle">
       <div class="toggle-icon">
@@ -43,15 +47,59 @@
 
     <!--Homepage-->
     <!--I want to implement something sliding image here-->
-    <div class="Homepage" id="home">
-      <img src="" alt="">
+    <div class="homepage" id="homepage">
+      <div id="slide">
+            <div class="item" style="background-image: url(img-1.jpg);">
+                <div class="content">
+                    <div class="name">1</div>
+                    <div class="des">HELLO</div>
+                    <a href="page1.html"><button>See more</button></a>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img-2.jpg);">
+                <div class="content">
+                    <div class="name">2</div>
+                    <div class="des">HELLO</div>
+                    <a href="page2.html"><button>See more</button></a>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img-3.jpg);">
+                <div class="content">
+                    <div class="name">3</div>
+                    <div class="des">HELLO</div>
+                    <a href="page3.html"><button>See more</button></a>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img-4.jpg);">
+                <div class="content">
+                    <div class="name">4</div>
+                    <div class="des">HELLO</div>
+                    <a href="page4.html"><button>See more</button></a>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img-5.jpg);">
+                <div class="content">
+                    <div class="name">5</div>
+                    <div class="des">HELLO</div>
+                    <a href="page5.html"><button>See more</button></a>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img-6.jpg);">
+                <div class="content">
+                    <div class="name">6</div>
+                    <div class="des">HELLO</div>
+                    <a href="page6.html"><button>See more</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
     </div>
 
-
-
-
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="./menuScript.js"></script>
+    <script src="./homeScript.js"></script>
   </body>
 </html>
