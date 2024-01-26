@@ -1,0 +1,93 @@
+#home .header{
+        width: 75%;
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+}
+
+.header .khf-logo a{
+        font-size: 8rem;
+        font-weight: 500;
+        font-family: var(--font-accent);
+        text-transform: uppercase;
+        line-height: 75%;
+}
+
+.header .khf-logo img{
+        width: auto;
+        height: auto;
+}
+
+
+.menu-toggle {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 0 2rem;
+        z-index: 10000;
+        cursor: pointer;
+      }
+      
+      .menu-toggle .toggle-icon span {
+        color: #000;
+        font-size: 6rem;
+        font-family: var(--font-accent);
+      }
+      
+      .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        z-index: 2;
+      }
+      
+      .menu-link {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        left: 2rem;
+        transition: all 0.3s;
+        margin: 0;
+      }
+      
+      .menu-link:hover {
+        left: -1rem;
+        transition: all 0.3s;
+      }
+      
+      .menu-link a {
+        font-family: var(--font-accent);
+        font-size: 5rem;
+        text-align: center;
+        color: var(--color-bg);
+        line-height: 0;
+      }
+      
+      .menu-link span {
+        font-family: var(--font-accent);
+        font-size: 5rem;
+        text-align: center;
+        color: var(--color-bg);
+        padding: 0 0.5rem;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+      
+      .menu-link:hover span {
+        opacity: 1;
+        transition: all 0.3s;
+      }
+      @media (max-width: 900px) {
+        .menu-link a {
+          font-size: 3.5rem;
+        }
+      }
