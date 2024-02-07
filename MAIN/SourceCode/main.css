@@ -1,264 +1,229 @@
 @import url("https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap");
 
-:root{
-    --color-bg: #fff;
-    --color-text: #0a0a0a;
-  
-    /* fonts */
-    --font-accent: "Cosi Times";
-    --font-sans-serif: "PP Neue Montreal";
-    --font-serif: "PP Eiko";
+:root {
+  --color-bg: #fff;
+  --color-text: #0a0a0a;
+
+  /* fonts */
+  --font-accent: "Cosi Times";
+  --font-sans-serif: "PP Neue Montreal";
+  --font-serif: "PP Eiko";
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  html,
-  body {
-    width: 100%;
-    min-height: 100%;
-    background: var(--color-bg);
-    font-family: var(--font-sans-serif);
-    /*scroll bar issue*/
-    overflow: auto;
-  }
-  
-  .container {
-    width: 100%;
-    height: 100%;
-    /* min-height: 90vh; */
-    padding: 2rem;
-  }
- 
-  h1 {
-    color: var(--color-text);
-  }
-  p,
-  span,
-  a {
-    font-size: 1rem;
-    line-height: 120%;
-    color: var(--color-text);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background: var(--color-bg);
+  font-family: var(--font-sans-serif);
+  /*scroll bar issue*/
+  overflow: auto;
+}
 
-  
+.container {
+  width: 100%;
+  height: 100%;
+  /* min-height: 90vh; */
+  padding: 2rem;
+}
+
+h1 {
+  color: var(--color-text);
+}
+p,
+span,
+a {
+  font-size: 1rem;
+  line-height: 120%;
+  color: var(--color-text);
+}
+
 span {
-    font-family: var(--font-serif);
-  }
-  
-  a {
-    text-decoration: none;
-    color: var(--color-text);
-  }
+  font-family: var(--font-serif);
+}
 
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  
-
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .menu-toggle {
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding: 0 2rem;
-        z-index: 10000;
-        cursor: pointer;
-      }
-      
-      .menu-toggle .toggle-icon span {
-        color: #000;
-        font-size: 6rem;
-        font-family: var(--font-accent);
-      }
-      
-      .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        /*Background color for menu*/
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(20px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        opacity: 0;
-        pointer-events: none;
-        z-index: 2;
-      }
-      
-      .menu-link {
-        position: relative;
-        width: 100%;
-        text-align: center;
-        left: 2rem;
-        transition: all 0.3s;
-        margin: 0;
-      }
-      
-      .menu-link:hover {
-        left: -1rem;
-        transition: all 0.3s;
-      }
-      
-      .menu-link a {
-        font-family: var(--font-accent);
-        font-size: 5rem;
-        text-align: center;
-        color: var(--color-bg);
-        line-height: 0;
-      }
-      
-      .menu-link span {
-        font-family: var(--font-accent);
-        font-size: 5rem;
-        text-align: center;
-        color: var(--color-bg);
-        padding: 0 0.5rem;
-        opacity: 0;
-        transition: all 0.3s;
-      }
-      
-      .menu-link:hover span {
-        opacity: 1;
-        transition: all 0.3s;
-      }
-      @media (max-width: 900px) {
-        .menu-link a {
-          font-size: 3.5rem;
-        }
-      }
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 0 2rem;
+  z-index: 10000;
+  cursor: pointer;
+}
 
-/*
- Below is for homepage, sliding image stuff
-*/
-body{
-        background-color: #eaeaea;
-        overflow: hidden;
-    }
-    .homepage{
-        position: absolute;
-        left:50%;
-        top:50%;
-        transform: translate(-50%,-50%);
-        width:1000px;
-        height:600px;
-        padding:50px;
-        background-color: #f5f5f5;
-        box-shadow: 0 30px 50px #dbdbdb;
-    }
-    #slide{
-        width:max-content;
-        margin-top:50px;
-    }
-    .item{
-        width:200px;
-        height:300px;
-        background-position: 50% 50%;
-        display: inline-block;
-        transition: 0.5s;
-        background-size: cover;
-        position: absolute;
-        z-index: 1;
-        top:50%;
-        transform: translate(0,-50%);
-        border-radius: 20px;
-        box-shadow:  0 30px 50px #505050;
-    }
-    .item:nth-child(1),
-    .item:nth-child(2){
-        left:0;
-        top:0;
-        transform: translate(0,0);
-        border-radius: 0;
-        width:100%;
-        height:100%;
-        box-shadow: none;
-    }
-    .item:nth-child(3){
-        left:50%;
-    }
-    .item:nth-child(4){
-        left:calc(50% + 220px);
-    }
-    .item:nth-child(5){
-        left:calc(50% + 440px);
-    }
-    .item:nth-child(n+6){
-        left:calc(50% + 660px);
-        opacity: 0;
-    }
-    .item .content{
-        position: absolute;
-        top:50%;
-        left:100px;
-        width:300px;
-        text-align: left;
-        padding:0;
-        color:#eee;
-        transform: translate(0,-50%);
-        display: none;
-        font-family: system-ui;
-    }
-    .item:nth-child(2) .content{
-        display: block;
-        z-index: 11111;
-    }
-    .item .name{
-        font-size: 40px;
-        font-weight: bold;
-        opacity: 0;
-        animation:showcontent 1s ease-in-out 1 forwards
-    }
-    .item .des{
-        margin:20px 0;
-        opacity: 0;
-        animation:showcontent 1s ease-in-out 0.3s 1 forwards
-    }
-    .item button{
-        padding:10px 20px;
-        border:none;
-        opacity: 0;
-        animation:showcontent 1s ease-in-out 0.6s 1 forwards
-    }
-    @keyframes showcontent{
-        from{
-            opacity: 0;
-            transform: translate(0,100px);
-            filter:blur(33px);
-        }to{
-            opacity: 1;
-            transform: translate(0,0);
-            filter:blur(0);
-        }
-    }
-    .buttons{
-        position: absolute;
-        bottom:30px;
-        z-index: 222222;
-        text-align: center;
-        width:100%;
-    }
-    .buttons button{
-        width:50px;
-        height:50px;
-        border-radius: 50%;
-        border:1px solid #555;
-        transition: 0.5s;
-    }.buttons button:hover{
-        background-color: #bac383;
-    }
-      
+.menu-toggle .toggle-icon span {
+  color: #000;
+  font-size: 6rem;
+  font-family: var(--font-accent);
+}
 
-    .about {
-        width: 100%;
-        
-    }
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /*Background color for menu*/
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.menu-link {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  left: 2rem;
+  transition: all 0.3s;
+  margin: 0;
+}
+
+.menu-link:hover {
+  left: -1rem;
+  transition: all 0.3s;
+}
+
+.menu-link a {
+  font-family: var(--font-accent);
+  font-size: 5rem;
+  text-align: center;
+  color: var(--color-bg);
+  line-height: 0;
+}
+
+.menu-link span {
+  font-family: var(--font-accent);
+  font-size: 5rem;
+  text-align: center;
+  color: var(--color-bg);
+  padding: 0 0.5rem;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.menu-link:hover span {
+  opacity: 1;
+  transition: all 0.3s;
+}
+@media (max-width: 900px) {
+  .menu-link a {
+    font-size: 3.5rem;
+  }
+}
+
+/** 
+Home page, Sliding image
+**/
+.slider {
+  /**
+  width --> edit to modify image size
+  **/
+  width: 1930px;
+  max-width: 100vw;
+  height: 700px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.slider .list {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+.slider .list img {
+  /**
+  width --> edit to modify image size
+  **/
+  width: 1930px; 
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+.slider .buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider .buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+.slider .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.slider .dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.slider .dots li.active {
+  width: 30px;
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    height: 400px;
+  }
+}
+
+.introduction{
+  position: relative;
+  width: 1000px;
+}
+
+.showcase1 .item1{
+  width: 500px;
+  margin-right: auto;
+  object-position: 50% 50%;
+}
+
+.showcase2{
+  width: 1000px;
+  display: block;
+  margin-left: auto;
+}
