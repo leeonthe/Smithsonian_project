@@ -1,23 +1,193 @@
-#home .header{
-        width: 75%;
-        display: flex;
-        gap: 2rem;
-        margin-bottom: 2rem;
+#home .header {
+  width: 75%;
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
-.header .khf-logo a{
-        font-size: 8rem;
-        font-weight: 500;
-        font-family: var(--font-accent);
-        text-transform: uppercase;
-        line-height: 75%;
+.header .khf-logo a {
+  font-size: 8rem;
+  font-weight: 500;
+  font-family: var(--font-accent);
+  text-transform: uppercase;
+  line-height: 75%;
 }
 
 .header .khf-logo {
-        margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.header .khf-logo img{
-        width: auto;
-        height: auto;
+.header .khf-logo img {
+  width: auto;
+  height: auto;
+}
+
+/** 
+Home page, Sliding image
+**/
+.slider {
+  /**
+        width --> edit to modify image size
+        **/
+  width: 1930px;
+  max-width: 100vw;
+  height: 700px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+.slider .list {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+.slider .list img {
+  /**
+        width --> edit to modify image size
+        **/
+  width: 1930px;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+.slider .buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider .buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+.slider .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.slider .dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.slider .dots li.active {
+  width: 30px;
+}
+@media screen and (max-width: 768px) {
+  .slider {
+    height: 400px;
+  }
+}
+
+.introduction {
+  position: relative;
+  width: 1000px;
+}
+
+.showcase1 .item1 {
+  width: 500px;
+  margin-right: auto;
+  object-position: 50% 50%;
+}
+
+.showcase2 {
+  width: 1000px;
+  display: block;
+  margin-left: auto;
+}
+
+/**
+new
+**/
+
+.article {
+  display: flex;
+
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.article-copy {
+  display: flex;
+  gap: 1rem;
+  width: 85%;
+  margin: 1rem auto;
+  justify-content: flex-end;
+  transform: translateX(-40px); 
+}
+
+
+
+.article-title {
+
+  flex-shrink: 0;
+}
+
+.article-title p {
+  margin: 3rem 0 0.75rem 0;
+}
+
+.article-title p a {
+        
+  font-size: 3.5rem;
+  font-family: var(--font-accent);
+  text-transform: uppercase;
+}
+
+.article-title span {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+#intro-article .article-title {
+  margin-right: 3rem;
+}
+
+#intro-article .article-text p {
+        
+  margin: 2.9rem 0 0.75rem 0;
+}
+
+.article-text p {
+        
+  font-size: 1.5rem;
+}
+
+.article-link {
+  width: max-content;
+  margin: 1rem 0;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--color-text);
+  border-radius: 2rem;
+}
+
+.article-link:hover {
+  background: var(--color-text);
+}
+
+.article-link:hover a {
+  color: var(--color-bg);
 }
